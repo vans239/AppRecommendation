@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<config>	
+
+  
+    <file action="write" path="d:\films.xml">   
+            <![CDATA[ <list> ]]>
+            
+    <xquery>
+    <xq-param name="doc">
+        <html-to-xml>
+           <http url="http://127.0.0.1/pro.html"/>
+        </html-to-xml>
+    </xq-param>
+    
+    <xq-expression><![CDATA[
+        declare variable $doc as node() external;   
+        
+        let $title := data($doc//*[@class="moviename-big"]/text())         
+        let $year := data($doc//*[@class="info"]/tbody/tr[1]/td[2]/div/a) 
+        let $country := data($doc//*[@class="info"]/tbody/tr[2]/td[2]/div/a)  
+        let $director := data($doc//*[@class="info"]/tbody/tr[4]/td[2]/a)
+        let $writers := data($doc//*[@class="info"]/tbody/tr[5]/td[2]/a)       
+        let $genres := data($doc//*[@class="info"]/tbody/tr[11]/td[2]/a)         
+        let $buget := data($doc//*[@class="info"]/tbody/tr[12]/td[2]/div) 
+        let $acters := data($doc//*[@class="actor_list"]/div/span/a)      
+        
+            return
+                <film>
+                    <title>{normalize-space($title)}</title> 
+                    <year>{normalize-space($year)}</year> 
+                    <country>{normalize-space($country[1])}</country> 
+                    <director>{normalize-space($director)}</director> 
+                    <writers>{normalize-space($writers[1])}</writers>                     
+                    <genres>{normalize-space($genres[1])}</genres>  
+                    <buget>{normalize-space($buget)}</buget>  
+                    <acter>{normalize-space($acters[1])}</acter>
+                    <acter>{normalize-space($acters[2])}</acter> 
+                    <acter>{normalize-space($acters[3])}</acter>  
+                </film>
+    ]]></xq-expression>
+	</xquery>
+
+            
+        <![CDATA[ </list> ]]>
+    </file>    
+        
+</config>
