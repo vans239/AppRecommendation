@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<var-def name="pageUrl">http://itunes.apple.com/us/app/pac-man-lite/id293778748?mt=8</var-def>
+    <!-- 
+    <var-def name="content">
+    	<html-to-xml>
+        	<http url="${pageUrl}"/>
+        </html-to-xml>
+    </var-def>
+    <file action="write" path="E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\page.xml">
+    	<template>${content}</template>
+    </file>
+    -->
+    <var-def name="content">
+    	<file path="E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\page.xml"/>
+    </var-def>
+    
+    <var-def name="param1">//div[@id="title"]/h1</var-def>
+    <var-def name="param2">//div[@id="title"]/h2</var-def>
+    <var-def name="param3">//div[@id="title"]/a</var-def>
+    <var-def name="param4">//div[@class="center-stack"]/div[@metrics-loc="Titledbox_Description"]/p</var-def>
+	<var-def name="param5">//ul[@class="list"]/li/div[@class="price"]</var-def>
+	<var-def name="param6">//ul[@class="list"]/li[@class="genre"]/a</var-def>
+	<var-def name="param7">//div[@id="left-stack"]/ul[@class="list"]/li</var-def>
+	<var-def name="param8">//div[@class="extra-list customer-ratings"]</var-def>
+	<var-def name="param9">//ol[@class="list"]/li/span</var-def>
+	<file action="write" path="E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\result.xml">
+		param1
+    	<xpath expression="${param1}">
+        	<var name="content"/>
+        </xpath>
+        param2
+    	<xpath expression="${param2}">
+        	<var name="content"/>
+        </xpath>
+        param3
+    	<xpath expression="${param3}">
+        	<var name="content"/>
+        </xpath>
+        param4
+        <xpath expression="${param4}">
+        	<var name="content"/>
+        </xpath>
+        param5
+        <xpath expression="${param5}">
+        	<var name="content"/>
+        </xpath>
+        param6
+        <xpath expression="${param6}">
+        	<var name="content"/>
+        </xpath>
+        param7
+        <xpath expression="${param7}">
+        	<var name="content"/>
+        </xpath>
+        param8
+        <xpath expression="${param8}">
+        	<var name="content"/>
+        </xpath>
+        param9
+        <xpath expression="${param9}">
+        	<var name="content"/>
+        </xpath>
+    </file>
+</config>

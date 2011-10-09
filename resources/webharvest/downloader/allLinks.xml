@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- 
+        Download multi-page list of items.
+        
+        @param pageUrl       - URL of starting page
+        @param itemXPath     - XPath expression to obtain single item in the list
+        @param nextXPath     - XPath expression to URL for the next page
+        @param maxloops      - maximum number of pages downloaded
+        
+        @return list of all downloaded items
+     -->
+    <function name="download-multipage-list">
+        <return>
+        	<empty>
+        	<var-def name="nextLinkUrl">abc</var-def>
+        	</empty>
+            <while condition="${nextLinkUrl.toString().length() != 0}" maxloops="${maxloops}" index="i">
+                <empty>
+                    <var-def name="content">
+                        <html-to-xml>
+                            <http url="${pageUrl}"/>
+                        </html-to-xml>
+                    </var-def>
+ 
+                    <var-def name="nextLinkUrl">
+                        <xpath expression="${nextXPath}">
+                            <var name="content"/>
+                        </xpath>
+                    </var-def>
+
+                    <var-def name="pageUrl">
+                    	<template>${sys.fullUrl(pageUrl.toString(), nextLinkUrl.toString())}</template>
+                        <!--<template>${sys.fullUrl(pageUrl.toString(), nextLinkUrl.toString())}</template>-->
+                    </var-def>
+                </empty>
+    
+                <xpath expression="${itemXPath}">
+                    <var name="content"/>
+                </xpath>
+            </while>
+        </return>
+    </function>
+	<var-def name="path">E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\downloader\exampleAlllinksPage.xml</var-def>
+	
+	<var-def name="pageUrl">http://itunes.apple.com/us/genre/ios-games/id6014?mt=8&amp;letter=A&amp;page=1#page</var-def>
+	<var-def name="maxloops">100</var-def>
+	<var-def name="item">//div[@id="selectedcontent"]/div/ul/li/a/@href</var-def>
+	<var-def name="next">//ul[@class="list paginate"][1]/li/a[@class="paginate-more"]/@href</var-def>
+	
+    <var-def name="apps">    
+        <call name="download-multipage-list">
+            <call-param name="pageUrl"><var name="pageUrl"/></call-param>
+            <call-param name="nextXPath"><var name="next"/></call-param>
+            <call-param name="itemXPath"><var name="item"/></call-param>
+            <call-param name="maxloops"><var name="maxloops"/></call-param>
+        </call>
+    </var-def>
+    
+    <file action="write" path="E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\result.xml" charset="UTF-8">
+        <loop item="item" index="i">
+            <list><var name="apps"/></list>
+            <body>
+            	
+            	<var name="item"/>
+            </body>
+        </loop>
+    </file>
+     -->
+</config>

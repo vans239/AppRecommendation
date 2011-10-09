@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<var-def name="pageUrl">http://itunes.apple.com/us/genre/ios-games/id6014?mt=8</var-def>
+	<var-def name="path">E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\downloader\exampleCategoryPage.xml</var-def>
+	
+	<!--
+    <var-def name="content">
+    	<html-to-xml>
+        	<http url="${pageUrl}"/>
+        </html-to-xml>
+    </var-def>
+    <file action="write" path="${path}">
+    	<template>${content}</template>
+    </file>
+     -->
+    <var-def name="categoriesLinks">//ul[@class="list column first"]/li/a/@href</var-def>
+    <var-def name="categories">//ul[@class="list column first"]/li/a/text()</var-def>
+    
+    <var-def name="content">
+    	<file path="${path}"/>
+    </var-def>
+     
+    <file action="write" path="E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\result.xml">
+		categories
+    	<xpath expression="${categories}">
+        	<var name="content"/>
+        </xpath>
+        categoriesLinks
+    	<xpath expression="${categoriesLinks}">
+        	<var name="content"/>
+        </xpath>
+    </file>
+</config>
