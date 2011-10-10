@@ -1,30 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
+	<include path="allLinks.xml"/>
 	
-	<var-def name="path">E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\downloader\exampleAllLinksPage.xml</var-def>
-	<var-def name="pageUrl">http://itunes.apple.com/us/genre/ios-games/id6014?mt=8&amp;letter=A</var-def>
-	 
-	<!--
-    <var-def name="content">
-    	<html-to-xml>
-        	<http url="${pageUrl}"/>
-        </html-to-xml>
-    </var-def>
-    <file action="write" path="${path}">
-    	<template>${content}</template>
-    </file>
-   -->  
-   <var-def name="alphabetLinks">//ul[@class="list alpha"]/li/a/@href</var-def>
-    
-    
-    <var-def name="content">
-    	<file path="${path}"/>
-    </var-def>
-    
-    <file action="write" path="E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\result.xml">
-		alphabetLinks
-    	<xpath expression="${alphabetLinks}">
-        	<var name="content"/>
-        </xpath>
-    </file>
+	<!-- 
+        Download all links to apps with this category.
+        
+        @param pageUrl       - URL of starting page
+        @param path    - name of file with app links
+     -->
+    <function name="categoryLinks">
+        <return>
+			<var-def name="alphabetLinksXpath">//ul[@class="list alpha"]/li/a/@href</var-def>		  			
+		    <var-def name="content">
+		    	<html-to-xml>
+		        	<http url="${pageUrl}"/>
+		        </html-to-xml>
+		    </var-def>
+		    <var-def name="alphabetLinks">
+		    	<xpath expression="${alphabetLinksXpath}">
+		        	<var name="content"/>
+		        </xpath>
+			</var-def>
+		    <loop item="alphabetLink" index="i">
+				<list><var name="alphabetLinks"/></list>
+				<body> 
+					<var-def name="allLinksLetter">    
+						<call name="allLinks">
+							<call-param name="pageUrl"><var name="alphabetLink"/></call-param>
+							<call-param name="path"><var name="path"/></call-param>
+						</call>
+					</var-def>	
+				</body>
+			</loop>	
+		</return>
+    </function>	
+    <!--
+    <var-def name="pageUrl">http://itunes.apple.com/us/genre/ios-lifestyle/id6012?mt=8</var-def>
+	<call name="categoryLinks">
+		<call-param name="pageUrl"><var name="pageUrl"/></call-param>
+		<call-param name="path">E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\result\allLinks.txt</call-param>
+	</call>
+	-->
 </config>
