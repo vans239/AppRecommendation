@@ -1,84 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-	<!-- 
-        Download multi-page list of items.
-        
-        @param pageUrl       - URL of starting page
-        @param itemXPath     - XPath expression to obtain single item in the list
-        @param nextXPath     - XPath expression to URL for the next page
-        @param maxloops      - maximum number of pages downloaded
-        
-        @return list of all downloaded items
-     -->
+    <!--
+            Download multi-page list of items.
+
+            @param pageUrl       - URL of starting page
+            @param itemXPath     - XPath expression to obtain single item in the list
+            @param nextXPath     - XPath expression to URL for the next page
+            @param maxloops      - maximum number of pages downloaded
+            @param path    - name of file with app links
+
+            @return list of all downloaded items
+         -->
     <function name="download-multipage-list">
         <return>
-        	<empty>
-        	<var-def name="nextLinkUrl">abc</var-def>
-        	</empty>
-            <while condition="${nextLinkUrl.toString().length() != 0}" maxloops="${maxloops}" index="i">
-                <empty>
-                    <var-def name="content">
-                        <html-to-xml>
-                            <http url="${pageUrl}"/>
-                        </html-to-xml>
-                    </var-def>
- 
-                    <var-def name="nextLinkUrl">
-                        <xpath expression="${nextXPath}">
-                            <var name="content"/>
-                        </xpath>
-                    </var-def>
+            <empty>
+                <var-def name="nextLinkUrl">abc</var-def>
+                <while condition="${nextLinkUrl.toString().length() != 0}" maxloops="${maxloops}" index="i">
+                    <empty>
+                        <var-def name="content">
+                            <html-to-xml>
+                                <http url="${pageUrl}"/>
+                            </html-to-xml>
+                        </var-def>
 
-                    <var-def name="pageUrl">
-                    	<template>${sys.fullUrl(pageUrl.toString(), nextLinkUrl.toString())}</template>
-                        <!--<template>${sys.fullUrl(pageUrl.toString(), nextLinkUrl.toString())}</template>-->
-                    </var-def>
-                </empty>
-    
-                <xpath expression="${itemXPath}">
-                    <var name="content"/>
-                </xpath>
-            </while>
+                        <var-def name="nextLinkUrl">
+                            <xpath expression="${nextXPath}">
+                                <var name="content"/>
+                            </xpath>
+                        </var-def>
+
+                        <var-def name="pageUrl">
+                            <template>${sys.fullUrl(pageUrl.toString(), nextLinkUrl.toString())}</template>
+                            <!--<template>${sys.fullUrl(pageUrl.toString(), nextLinkUrl.toString())}</template>-->
+                        </var-def>
+                        <var-def name="links">
+                            <xpath expression="${itemXPath}">
+                                <var name="content"/>
+                            </xpath>
+                        </var-def>
+                        <file action="append" path="${path}" charset="UTF-8">
+                            <loop item="item" index="i">
+                                <list>
+                                    <var name="links"/>
+                                </list>
+                                <body>
+                                    <var name="item"/>
+                                </body>
+                            </loop>
+                        </file>
+                    </empty>
+                </while>
+            </empty>
         </return>
     </function>
     <!-- 
         Download all links to apps.
-        
+
+        @param maxloops -max depth of searched pages
         @param pageUrl       - URL of starting page
         @param path    - name of file with app links
      -->
     <function name="allLinks">
         <return>
-			<var-def name="maxloops">10</var-def>
-			<var-def name="item">//div[@id="selectedcontent"]/div/ul/li/a/@href</var-def>
-			<var-def name="next">//ul[@class="list paginate"][1]/li/a[@class="paginate-more"]/@href</var-def>
-
-		    <var-def name="apps">    
-		        <call name="download-multipage-list">
-		            <call-param name="pageUrl"><var name="pageUrl"/></call-param>
-		            <call-param name="nextXPath"><var name="next"/></call-param>
-		            <call-param name="itemXPath"><var name="item"/></call-param>
-		            <call-param name="maxloops"><var name="maxloops"/></call-param>
-		        </call>
-		    </var-def>	
-		    <file action="append" path="${path}" charset="UTF-8">
-				<loop item="item" index="i">
-					<list><var name="apps"/></list>
-					<body>           	
-						<var name="item"/>
-					</body>
-				</loop>
-			</file>			    
- 		</return>
+            <empty>
+                <var-def name="itemXPath">//div[@id="selectedcontent"]/div/ul/li/a/@href</var-def>
+                <var-def name="nextXPath">//ul[@class="list paginate"][1]/li/a[@class="paginate-more"]/@href</var-def>
+                <call name="download-multipage-list">
+                    <call-param name="pageUrl">
+                        <var name="pageUrl"/>
+                    </call-param>
+                    <call-param name="nextXPath">
+                        <var name="nextXPath"/>
+                    </call-param>
+                    <call-param name="itemXPath">
+                        <var name="itemXPath"/>
+                    </call-param>
+                    <call-param name="maxloops">
+                        <var name="maxloops"/>
+                    </call-param>
+                    <call-param name="path">
+                        <var name="path"/>
+                    </call-param>
+                </call>
+            </empty>
+        </return>
     </function>
-    
+
     <!--
-    <var-def name="pageUrl">http://itunes.apple.com/us/genre/ios-games/id6014?mt=8&amp;letter=A&amp;page=1#page</var-def>
-	<var-def name="allLinks">    
-		<call name="allLinks">
-			<call-param name="pageUrl"><var name="pageUrl"/></call-param>
-			<call-param name="path">E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\result\allLinks.txt</call-param>
-		</call>
-	</var-def>	
-	-->
+   <var-def name="pageUrl">http://itunes.apple.com/us/genre/ios-games/id6014?mt=8&amp;letter=A&amp;page=1#page</var-def>
+   <var-def name="allLinks">
+       <call name="allLinks">
+           <call-param name="pageUrl"><var name="pageUrl"/></call-param>
+           <call-param name="path">E:\VANS\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\result\allLinks.txt</call-param>
+       </call>
+   </var-def>
+   -->
 </config>

@@ -1,4 +1,4 @@
-package ru.filmRecommendation.exception;
+package ru.FilmRecommendation.Exception;
 
-public class WebHarvestException {
+public class WebHarvestException extends Exception{
 }

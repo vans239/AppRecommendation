@@ -1,4 +1,5 @@
-package ru.filmRecommendation.core;
+package ru.FilmRecommendation.core;
 
 public class Wrapper {
+
 }

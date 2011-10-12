@@ -7,9 +7,6 @@
             <value>resources/project.properties</value>
         </property>
     </bean>
-    <bean id="wrapper" class=" ru.FilmRecommendation.Wrapper">
-        <constructor-arg type="java.lang.String">
-            <value>Test</value>
-        </constructor-arg>
+    <bean id="wrapper" class=" ru.FilmRecommendation.wrapper.ItunesWrapper">
     </bean>
 </beans>
