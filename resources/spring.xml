@@ -7,6 +7,6 @@
             <value>resources/project.properties</value>
         </property>
     </bean>
-    <bean id="wrapper" class=" ru.filmRecommendation.wrapper.ItunesWrapper">
+    <bean id="wrapper" class=" ru.appRecommendation.wrapper.ItunesWrapper">
     </bean>
 </beans>
