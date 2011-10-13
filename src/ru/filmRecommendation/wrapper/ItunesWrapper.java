@@ -1,4 +1,4 @@
-package ru.FilmRecommendation.wrapper;
+package ru.filmRecommendation.wrapper;
 
 import java.net.URL;
 import java.io.*;
@@ -8,8 +8,8 @@ import org.apache.log4j.Logger;
 import org.webharvest.definition.ScraperConfiguration;
 import org.webharvest.runtime.Scraper;
 
-import ru.FilmRecommendation.core.Wrapper;
-import ru.FilmRecommendation.Exception.WebHarvestException;
+import ru.filmRecommendation.core.Wrapper;
+import ru.filmRecommendation.exception.WebHarvestException;
 
 public class ItunesWrapper extends Wrapper {
 	private static Logger log = Logger.getLogger(ItunesWrapper.class);
@@ -66,8 +66,8 @@ public class ItunesWrapper extends Wrapper {
 
 	public void wrap(){
 		try {
-			wrapLinks(1);
-			downloadLinks();
+			//wrapLinks(1);
+			//downloadLinks();
 		} catch (Exception exp) {
 			exp.printStackTrace();
 		}

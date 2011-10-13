@@ -1,4 +1,4 @@
-package ru.FilmRecommendation;
+package ru.filmRecommendation;
 
 
 import org.apache.log4j.Logger;
@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import ru.FilmRecommendation.wrapper.ItunesWrapper;
+import ru.filmRecommendation.wrapper.ItunesWrapper;
 
 public class Main {
 	private static Logger log = Logger.getLogger(Main.class);
