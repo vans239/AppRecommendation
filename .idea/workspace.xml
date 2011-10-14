@@ -45,6 +45,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/commons-dbcp-1.4/commons-dbcp-1.4.jar" afterPath="$PROJECT_DIR$/libs/commons-dbcp-1.4/commons-dbcp-1.4.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/commons-pool-1.5.6/commons-pool-1.5.6.jar" afterPath="$PROJECT_DIR$/libs/commons-pool-1.5.6/commons-pool-1.5.6.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/mysql-connector-java-5.0.8/mysql-connector-java-5.0.8-bin.jar" afterPath="$PROJECT_DIR$/libs/mysql-connector-java-5.0.8/mysql-connector-java-5.0.8-bin.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Kate.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Kate.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/af.xml" afterPath="$PROJECT_DIR$/.idea/libraries/af.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FilmRecommendation.iml" afterPath="$PROJECT_DIR$/FilmRecommendation.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-end/index.php" afterPath="$PROJECT_DIR$/Front-end/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser/Kinopoisk.xml" afterPath="$PROJECT_DIR$/parser/Kinopoisk.xml" />
@@ -52,14 +64,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/log4j.properties" afterPath="$PROJECT_DIR$/resources/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/project.properties" afterPath="$PROJECT_DIR$/resources/project.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/spring.xml" afterPath="$PROJECT_DIR$/resources/spring.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/webharvest/downloader/downloadAllLinks.xml" afterPath="$PROJECT_DIR$/resources/webharvest/downloader/downloadAllLinks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/webharvest/downloader/downloadCategoryLinks.xml" afterPath="$PROJECT_DIR$/resources/webharvest/downloader/downloadCategoryLinks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/webharvest/downloader/downloadLetterLinks.xml" afterPath="$PROJECT_DIR$/resources/webharvest/downloader/downloadLetterLinks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/webharvest/itunes_apple.xml" afterPath="$PROJECT_DIR$/resources/webharvest/itunes_apple.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/appRecommendation/Main.java" afterPath="$PROJECT_DIR$/src/ru/appRecommendation/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/appRecommendation/core/Wrapper.java" afterPath="$PROJECT_DIR$/src/ru/appRecommendation/core/Wrapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/appRecommendation/exception/WebHarvestException.java" afterPath="$PROJECT_DIR$/src/ru/appRecommendation/exception/WebHarvestException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/appRecommendation/wrapper/ItunesWrapper.java" afterPath="$PROJECT_DIR$/src/ru/appRecommendation/wrapper/ItunesWrapper.java" />
-      <change type="MOVED" beforePath="E:\VANS\AppRecommendation\resources\webharvest\downloader\allLinks.xml" afterPath="$PROJECT_DIR$/resources/webharvest/downloader/downloadLetterLinks.xml" />
-      <change type="MOVED" beforePath="E:\VANS\AppRecommendation\resources\webharvest\downloader\alphabet.xml" afterPath="$PROJECT_DIR$/resources/webharvest/downloader/downloadCategoryLinks.xml" />
-      <change type="MOVED" beforePath="E:\VANS\AppRecommendation\resources\webharvest\downloader\category.xml" afterPath="$PROJECT_DIR$/resources/webharvest/downloader/downloadAllLinks.xml" />
     </list>
     <ignored path="FilmRecommendation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,19 +153,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebHarvestException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/appRecommendation/exception/WebHarvestException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ItunesWrapper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/appRecommendation/wrapper/ItunesWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="62" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.01934016">
+            <state line="57" column="63" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.34812286">
               <folding />
             </state>
           </provider>
@@ -173,7 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/ru/FilmRecommendation/wrapper/ItunesWrapper.java" />
         <option value="$PROJECT_DIR$/src/ru/FilmRecommendation/exception/WebHarvestException.java" />
         <option value="$PROJECT_DIR$/src/ru/filmRecommendation/core/Wrapper.java" />
         <option value="$PROJECT_DIR$/src/ru/filmRecommendation/exception/WebHarvestException.java" />
@@ -188,6 +190,7 @@
         <option value="$PROJECT_DIR$/resources/webharvest/downloader/downloadLetterLinks.xml" />
         <option value="$PROJECT_DIR$/resources/webharvest/downloader/alphabet.xml" />
         <option value="$PROJECT_DIR$/resources/webharvest/downloader/category.xml" />
+        <option value="$PROJECT_DIR$/resources/webharvest/itunes_apple.xml" />
         <option value="$PROJECT_DIR$/src/ru/appRecommendation/wrapper/ItunesWrapper.java" />
       </list>
     </option>
@@ -286,122 +289,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AppRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FilmRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FilmRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FilmRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exception" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FilmRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FilmRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FilmRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppRecommendation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webharvest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -616,16 +503,16 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39867842" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24339207" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.67070484" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.67070484" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328877" sideWeight="0.72246695" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15240642" sideWeight="0.60903084" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27753305" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39096916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24339207" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -689,11 +576,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -734,21 +616,6 @@
         <state line="186" column="0" selection-start="13200" selection-end="13200" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/webharvest/downloader/downloadLetterLinks.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="39" selection-start="2637" selection-end="2637" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/webharvest/downloader/downloadCategoryLinks.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="41" selection-start="367" selection-end="388" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/webharvest/downloader/downloadAllLinks.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="40" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/spring.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="51" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0" />
@@ -761,12 +628,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/appRecommendation/exception/WebHarvestException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" />
+        <state line="2" column="13" selection-start="41" selection-end="93" vertical-scroll-proportion="0.048158642">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/webharvest/downloader/downloadAllLinks.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="46" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.1889313">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/webharvest/downloader/downloadCategoryLinks.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="41" selection-start="367" selection-end="388" vertical-scroll-proportion="-0.6221374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/webharvest/downloader/downloadLetterLinks.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="84" selection-start="2429" selection-end="2429" vertical-scroll-proportion="1.0830489">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/webharvest/itunes_apple.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="11" selection-start="3801" selection-end="3801" vertical-scroll-proportion="1.8759954">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/appRecommendation/wrapper/ItunesWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="62" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.01934016">
+        <state line="57" column="63" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.34812286">
           <folding />
         </state>
       </provider>
