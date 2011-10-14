@@ -13,7 +13,7 @@ import ru.appRecommendation.exception.WebHarvestException;
 
 public class ItunesWrapper extends Wrapper {
 	private static Logger log = Logger.getLogger(ItunesWrapper.class);
-	private String configPath = "resources/webharvest/downloader/category.xml";
+	private String configPath = "resources/webharvest/downloader/downloadAllLinks.xml";
 	private String tempPath = "data";
 	private String linksFilePath = tempPath + "/" + "allLinks.txt";
 	private String workingDir = System.getProperty("user.dir");
@@ -66,7 +66,7 @@ public class ItunesWrapper extends Wrapper {
 
 	public void wrap(){
 		try {
-			//wrapLinks(1);
+			wrapLinks(1);
 			//downloadLinks();
 		} catch (Exception exp) {
 			exp.printStackTrace();

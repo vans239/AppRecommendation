@@ -60,7 +60,7 @@
         @param pageUrl       - URL of starting page
         @param path    - name of file with app links
      -->
-    <function name="allLinks">
+    <function name="downloadLetterLinks">
         <return>
             <empty>
                 <var-def name="itemXPath">//div[@id="selectedcontent"]/div/ul/li/a/@href</var-def>

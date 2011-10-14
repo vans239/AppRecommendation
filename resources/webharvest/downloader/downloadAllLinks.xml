@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <include path="alphabet.xml"/>
+    <include path="downloadCategoryLinks.xml"/>
 
     <!--
     <var-def name="path">C:\My Dropbox\programms\Java\FilmRecommendation\resources\webharvest\result\allLinks.txt</var-def>
@@ -30,7 +30,7 @@
             </list>
             <body>
                 <empty>
-                    <call name="categoryLinks">
+                    <call name="downloadCategoryLinks">
                         <call-param name="pageUrl">
                             <var name="item"/>
                         </call-param>
