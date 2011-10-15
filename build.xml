@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project default="dist" name="Recommendations">    
+
+    <property name="srcDir" location="src/ru/appRecommendation"/>
+    <property name="buildDir" location="build"/>
+    <property name="distDir" location="dist"/>
+
+    <!--Libs-->
+    <path id="libs">
+        <fileset dir="libs" includes="**/*.jar"/>        
+    </path>
+
+    <pathconvert pathsep=" " property="libs_manifest" refid="libs"/>
+
+    <target name="init">
+       <tstamp/>
+       <mkdir dir="${buildDir}"/>
+       <mkdir dir="${distDir}"/>
+    </target>
+
+    <target name="compile" depends="init">
+       <javac srcdir="${srcDir}" destdir="${buildDir}">
+       <classpath refid="libs"/>
+       </javac>
+    </target>
+
+    <target name="dist" depends="compile">
+       <jar destfile="${distDir}/appRecommendations.jar" basedir="${buildDir}">
+         <manifest>
+           <attribute name="Built-By" value="${user.name}"/>
+           <attribute name="Main-Class" value="ru.appRecommendation.Main"/>
+
+	   <attribute name="Class-Path" value="${libs_manifest}/"/>
+         </manifest>
+       </jar>      
+    </target>
+
+    <target name="clean">
+      <delete dir="${buildDir}"/>
+      <delete dir="${distDir}"/>
+    </target>
+</project>
