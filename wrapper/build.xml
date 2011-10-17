@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BrandAnalytic" default="all" basedir=".">
+
+    <path id="libs">
+            <fileset dir="${lib.dir}" includes="**/*.jar"/>
+            <fileset dir="${dist.dir}" includes="**/*.jar"/>
+    </path>
+
+    <property name="src.wrapper.dir" location="${project.dir}/wrapper/src/java/"/>
+    <pathconvert pathsep=" " property="libs_manifest" refid="libs"/>
+
+    <target name="all">
+
+	<!--class-файлы в папку build/classes-->
+        <javac srcdir="${src.wrapper.dir}"
+               destdir="${build.dir}/classes"
+               debug="true"
+               deprecation="true"
+               optimize="false"
+               includeAntRuntime="false">
+            <classpath refid="libs"/>
+        </javac>
+
+	<!--собирается архив с классом, у которого есть метод main в папку dist-->
+        <jar destfile="${dist.dir}/miner.jar" basedir="${classes.dir}" includes="ru/compscicenter/appRecommendation/**/*.*">
+            <manifest>
+                <attribute name="Built-By" value="miner: build.xml"/>
+                <attribute name="Class-Path" value="${libs_manifest}/"/>
+            </manifest>
+        </jar>
+
+        <mkdir dir="${build.dir}/wrapper"/>
+        <copy todir="${build.dir}/wrapper" overwrite="true">
+            <fileset dir="${project.dir}/wrapper" includes="**/*.*" excludes="**/*.java build.xml *.iml"/>
+        </copy>
+	<echo>core building complete</echo>
+    </target>
+
+</project>
+

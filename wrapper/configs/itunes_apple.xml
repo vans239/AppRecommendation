@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!--
+        Download all links to apps.
+
+        @param filePath       - URL of wrapping page
+     -->
+    <function name="wrapPage">
+        <return>
+            <empty>
+
+                <var-def name="content">
+                    <html-to-xml>
+                        <file action="read"
+                              path="${filePath}"/>
+                    </html-to-xml>
+                </var-def>
+                <var-def name="appname">//div[@id="title"]/h1/text()</var-def>
+                <var-def name="developer">//div[@id="title"]/h2/text()</var-def>
+                <var-def name="description">
+                    //div[@class="center-stack"]/div[@metrics-loc="Titledbox_Description"]/p//text()
+                </var-def>
+                <var-def name="price">//ul[@class="list"]/li/div[@class="price"]/text()</var-def>
+                <var-def name="category">//ul[@class="list"]/li[@class="genre"]/a/text()</var-def>
+                <var-def name="ratings">//div[@class="extra-list customer-ratings"]</var-def>
+                <var-def name="apprating">//div[@class="app-rating"]/a/text()</var-def>
+                <var-def name="updated">//ul[@class="list"]/li[@class="release-date"]/text()</var-def>
+                <var-def name="other">//div[@rating-software="100,itunes-games"]/ul[@class="list"]/li[not(@*)]</var-def>
+                <var-def name="requirements">//div[@rating-software="100,itunes-games"]/p/text()</var-def>
+                <var-def name="versionDescription">
+                    //div[@class="center-stack"]/div[contains(@metrics-loc,'Titledbox_What')]/p//text()
+                </var-def>
+
+                appname
+                <xpath expression="${appname}">
+                    <var name="content"/>
+                </xpath>
+                developer
+                <xpath expression="${developer}">
+                    <var name="content"/>
+                </xpath>
+                description
+                <xpath expression="${description}">
+                    <var name="content"/>
+                </xpath>
+                price
+                <xpath expression="${price}">
+                    <var name="content"/>
+                </xpath>
+                category
+                <xpath expression="${category}">
+                    <var name="content"/>
+                </xpath>
+                app-rating
+                <xpath expression="${apprating}">
+                    <var name="content"/>
+                </xpath>
+                ratings
+                <xpath expression="${ratings}">
+                    <var name="content"/>
+                </xpath>
+                updated
+                <xpath expression="${updated}">
+                    <var name="content"/>
+                </xpath>
+                other
+                <xpath expression="${other}">
+                    <var name="content"/>
+                </xpath>
+                requirements
+                <xpath expression="${requirements}">
+                    <var name="content"/>
+                </xpath>
+                versionDescription
+                <xpath expression="${versionDescription}">
+                    <var name="content"/>
+                </xpath>
+            </empty>
+        </return>
+    </function>
+
+    <var-def name="files">
+        <file action="list" path="${path}" listdirs="no" listfilter="*.html"/>
+    </var-def>
+    <loop item="file" index="i">
+        <list>
+            <var name="files"/>
+        </list>
+        <body>
+            <empty>
+                <call name="wrapPage">
+                    <call-param name="filePath">
+                        <var name="file"/>
+                    </call-param>
+                </call>
+            </empty>
+        </body>
+    </loop>
+
+
+</config>

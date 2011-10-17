@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BrandAnalytic" default="all" basedir=".">
+
+    <!--main paths defenition-->
+    <property name="project.dir" location="."/>
+    <property name="lib.dir" location="${project.dir}/lib"/>
+    <property name="build.dir" location="${project.dir}/build"/>
+    <property name="classes.dir" location="${build.dir}/classes"/>
+    <property name="dist.dir" location="${build.dir}/dist"/>
+
+    <!--пути к вложенным билд файлам-->
+    <property name="core.build" location="${project.dir}/core/build.xml"/>
+    <property name="wrapper.build" location="${project.dir}/wrapper/build.xml"/>
+    <property name="indexer.build" location="${project.dir}/indexer/build.xml"/>
+    <property name="frontend.build" location="${project.dir}/frontend/build.xml"/>
+    <property name="searcher.build" location="${project.dir}/searcher/build.xml"/>
+
+    <!-- classpath -->
+    <path id="libs">
+        <fileset dir="lib" includes="**/*.jar"/>
+        <fileset dir="${classes.dir}" includes="**/*.class"/>
+    </path>
+
+    <!--iсоздание папок-->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <!--далее по всем таргетам вызываются вложенные билдеры-->
+    <target name="core" depends="init">
+        <ant antfile="${core.build}"/>
+    </target>
+
+    <target name="indexer" depends="core">
+        <ant antfile="${indexer.build}"/>
+    </target>
+
+    <target name="searcher" depends="indexer">
+        <ant antfile="${searcher.build}"/>
+    </target>
+
+    <target name="frontend" depends="searcher">
+        <ant antfile="${frontend.build}"/>
+    </target>
+
+    <target name="wrapper" depends="core">
+        <ant antfile="${wrapper.build}"/>
+    </target>
+
+    <!--по умолчанию вызывается этот таргет (тут пара строчек лишние, но так понятнее)-->
+    <target name="all" depends="init">
+        <antcall target="core"/>
+        <antcall target="indexer"/>
+        <antcall target="frontend"/>
+        <antcall target="wrapper"/>
+        <antcall target="searcher"/>
+    </target>
+
+    <!--для запуска различных модулей испольются следующие таргеты-->
+    <target name="run_indexer">
+        <java dir="${build.dir}" jar="${dist.dir}/core.jar" fork="true">
+            <jvmarg value="-Xms64m"/>
+            <jvmarg value="-Xmx1750m"/>
+            <arg value="/indexer/src/scripts/beans.xml" />
+        </java>
+    </target>
+
+    <target name="run_miner">
+        <java dir="${build.dir}" jar="${dist.dir}/core.jar" fork="true">
+            <jvmarg value="-Xms64m"/>
+            <jvmarg value="-Xmx1750m"/>
+            <arg value="/miner/src/scripts/beans.xml" />
+        </java>
+    </target>
+
+    <target name="run_frontend">
+        <java dir="${build.dir}" jar="${dist.dir}/core.jar" fork="true">
+            <jvmarg value="-Xms64m"/>
+            <jvmarg value="-Xmx1750m"/>
+            <arg value="/frontend/src/scripts/beans.xml" />
+        </java>
+    </target>
+
+</project>
+
