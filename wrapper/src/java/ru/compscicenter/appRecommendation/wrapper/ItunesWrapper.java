@@ -80,12 +80,12 @@ public class ItunesWrapper extends Wrapper {
 	}
 
 	public void wrap() {
-		log.info("LOG");
-
 		try{
+			log.info("Starting wrapping");
 			//wrapLinks(1);
 			//downloadLinks();
 			//wrapPages();
+			log.info("End wrapping");
 		} catch ( Exception exp){
 			exp.printStackTrace();
 		}
